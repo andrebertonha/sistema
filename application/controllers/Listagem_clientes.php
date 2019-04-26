@@ -13,12 +13,12 @@ class Listagem_Clientes extends CI_Controller {
     
     public function index() { 
         $get_clients['clients'] = $this->clientes_model->get_all();
-        $this->load->view('listar_clientes', $get_clients);        
+        $this->load->template('listar_clientes', $get_clients);        
     }     
     
     public function carregar_form_cadastro() {
-        $dados['states'] = $this->estado_model->getAll();
-        $this->load->view('cadastro_cliente', $dados);
+        $dados['states'] = $this->estado_model->getAll();        
+        $this->load->template('cadastro_cliente', $dados);        
     }
         
     public function cadastrar() {        
@@ -38,9 +38,9 @@ class Listagem_Clientes extends CI_Controller {
         }  
     }
     
-    public function editar($idCliente) {        
+    public function editar($idCliente) {
         $cliente['dados_cliente'] = $this->clientes_model->get_by('id_cliente',$idCliente);
-        $this->load->view('editar_cliente',$cliente);
+        $this->load->template('editar_cliente',$cliente);
     }
     
     public function update() {        

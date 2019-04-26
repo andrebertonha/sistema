@@ -37,12 +37,12 @@ class Cadastro_Usuario extends CI_Controller {
     
     public function listar_usuarios() {        
         $get_users['users'] = $this->usuarios_model->get_all();        
-        $this->load->view('listar_usuarios', $get_users);
+        $this->load->template('listar_usuarios', $get_users);
     }        
 
     public function editar($idUsuario) {        
         $usuario['dados_usuario'] = $this->usuarios_model->get_by('id_usuario',$idUsuario);      
-        $this->load->view('editar_usuario',$usuario);
+        $this->load->template('editar_usuario',$usuario);
     }    
     
     public function update() {        
