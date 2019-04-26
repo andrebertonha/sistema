@@ -31,27 +31,28 @@ function filterme() {
 
 <div class="container" style="width:100%;">
     <div class="table-wrapper table-responsive">
-        <div class="table-title"><h2><b>Clientes</b></h2>                
-            <h4>Filtros</h4>                     
-            <fieldset style="">
-                <label>Origem</label>
-                <div class="form-group">                            
-                    <input type="checkbox" onchange="filterme()" name="site" id="site"> Site                            
-                    <input type="checkbox" onchange="filterme()" name="boca" id="boca"> Boca a boca
-                    <input type="checkbox" onchange="filterme()" name="face" id="face"> Facebook                            
-                    <input type="checkbox" onchange="filterme()" name="indica" id="indica"> Indicação
-                </div>
-            </fieldset>
-            <div class="form-group">                        
-                <label for="situacao">Situação</label>
-                <select name="situacao" id="situacao" onchange="filterme()" class="form-control">
-                    <option value="">Selecione</option>
-                    <option value="S">Ativo</option>
-                    <option value="N">Inativo</option>
-                </select>
-            </div>                
-        </div>
-        <table id="dataTableClientes" class="display responsive nowrap" width="100%" cellspacing="0">
+        
+        <table id="dataTableClientes" class="display responsive" width="100%" cellspacing="0">
+            <div class="table-title table-responsive" style="width:1276.97px;"><h2><b>Clientes</b></h2>
+                <h4>Filtros</h4>                     
+                <fieldset style="width:450px;">
+                    <label>Origem</label>
+                    <div class="form-group">                            
+                        <input type="checkbox" onchange="filterme()" name="site" id="site"> Site                            
+                        <input type="checkbox" onchange="filterme()" name="boca" id="boca"> Boca a boca
+                        <input type="checkbox" onchange="filterme()" name="face" id="face"> Facebook                            
+                        <input type="checkbox" onchange="filterme()" name="indica" id="indica"> Indicação
+                    </div>
+                    <div class="form-group">                        
+                        <label for="situacao">Situação</label>
+                        <select name="situacao" id="situacao" onchange="filterme()" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="S">Ativo</option>
+                            <option value="N">Inativo</option>
+                        </select>
+                    </div>
+                </fieldset>            
+            </div>
             <thead>
                 <tr>
                     <th scope="col"></th>
