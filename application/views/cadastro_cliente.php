@@ -105,4 +105,4 @@ $(document).ready(function(){
             <button class="btn btn-success pull-right" type="submit" name="cadastro_cliente" value="cadastro_cliente">Cadastrar</button>
         </form>
     </div>
-</div>   
+</div>

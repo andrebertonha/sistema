@@ -39,7 +39,6 @@
                             <input name="senha" class="form-control" placeholder="******" type="password" required>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
                     </div>

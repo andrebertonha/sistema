@@ -70,13 +70,9 @@ class Cadastro_Usuario extends CI_Controller {
             $this->session->set_flashdata('msg','usuario deletado');
             redirect('cadastro_usuario/listar_usuarios');
         }        
-    }
+    }   
     
-    public function logout() {
-        $this->session->sess_destroy();
-        redirect('login');
-    }
-    
+    //funcao para validar senha forte, verificar a necessidade de move-la 
     public function valida_password($senha)
     {   
         $password = trim($senha);        

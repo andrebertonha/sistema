@@ -2,7 +2,6 @@
 $(function() {
   otable = $('#dataTableClientes').dataTable();  
 });
-
 function filterme() {  
   var valueSite = $('input:checkbox[name="site"]:checked').map(function() {
     return this.value === 'on' ? 'S' : 'N';
@@ -27,11 +26,9 @@ function filterme() {
   var selectSituacao = $('#situacao').val();
   otable.fnFilter(selectSituacao, [11], true, false, false, false);
 }
-</script>    
-
+</script>
 <div class="container" style="width:100%;">
-    <div class="table-wrapper table-responsive">
-        
+    <div class="table-wrapper table-responsive">        
         <table id="dataTableClientes" class="display responsive" width="100%" cellspacing="0">
             <div class="table-title table-responsive" style="width:1276.97px;"><h2><b>Clientes</b></h2>
                 <h4>Filtros</h4>                     
@@ -96,4 +93,4 @@ function filterme() {
             </tbody>
         </table>          
     </div>        
-</div>    
+</div>

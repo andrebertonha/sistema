@@ -30,8 +30,7 @@ $('#telefone').mask('(00) 00000-0000');
                 echo '<div class="alert alert-danger">';
                 echo $this->session->flashdata('msg');
                 echo "</div>";
-            } 
-
+            }
             echo form_open('cadastro_usuario/update/');
             ?>
             <div class="form-group">
@@ -74,7 +73,6 @@ $('#telefone').mask('(00) 00000-0000');
                     echo form_error('situacao');
                 ?>
             </div>
-
             <div class="form-group">
                 <label for="estados">Estado</label>
                 <select name="estados" id="estados" class="form-control">
