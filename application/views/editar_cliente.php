@@ -44,6 +44,7 @@ $(document).ready(function(){
             </div>
             <div class="form-group">
                 <?php 
+                
                     echo form_label('Email');
                     echo form_input('email', set_value('email', $dados_cliente['email_cliente']),'class="form-control"');
                     echo form_error('email');

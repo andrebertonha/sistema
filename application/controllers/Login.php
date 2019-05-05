@@ -24,7 +24,7 @@ class Login extends CI_Controller {
         }
         else {
             $this->session->set_flashdata('msg', 'Usuário ou senha inválidos');
-            redirect('login');
+            //redirect('login');
         }
     }
 

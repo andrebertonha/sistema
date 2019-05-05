@@ -14,11 +14,16 @@ class Listagem_Clientes extends CI_Controller {
     public function index() { 
         $get_clients['clients'] = $this->clientes_model->get_all();
         $this->load->template('listar_clientes', $get_clients);        
-    }     
+    }
+
+    public function datatable() {
+        $get_clients['clients'] = $this->clientes_model->get_all();
+        $this->load->template('datatable', $get_clients);
+    }
     
-    public function carregar_form_cadastro() {
+    public function carregar_form_cadastro() {        
         $dados['states'] = $this->estado_model->getAll();        
-        $this->load->template('cadastro_cliente', $dados);        
+        $this->load->template('cadastro_cliente', $dados);
     }
         
     public function cadastrar() {        
@@ -43,9 +48,10 @@ class Listagem_Clientes extends CI_Controller {
         $this->load->template('editar_cliente',$cliente);
     }
     
-    public function update() {        
+    public function update() { 
+
         $this->form_validation->set_rules('nome','nome','required');
-        $this->form_validation->set_rules('email','email','required');
+        $this->form_validation->set_rules('email','email','required|valid_email');
         $this->form_validation->set_rules('cnpj', 'cnpj', 'required');
         $this->form_validation->set_rules('estados','estados','required');        
         $this->form_validation->set_rules('cidades','cidades','required');
@@ -53,7 +59,7 @@ class Listagem_Clientes extends CI_Controller {
         
         if(!$this->form_validation->run()) {
             $this->session->set_flashdata('msg', validation_errors());            
-            $this->editar();
+            $this->editar($this->session->usuario_logado['id_usuario']);
         }            
         else {                        
             $this->clientes_model->update_client($this->input->post('id_cliente'));

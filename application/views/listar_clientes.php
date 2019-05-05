@@ -1,4 +1,5 @@
 <script>
+
 $(function() {
   otable = $('#dataTableClientes').dataTable();  
 });
@@ -26,6 +27,7 @@ function filterme() {
   var selectSituacao = $('#situacao').val();
   otable.fnFilter(selectSituacao, [11], true, false, false, false);
 }
+
 </script>
 <div class="container" style="width:100%;">
     <div class="table-wrapper table-responsive">        
@@ -48,9 +50,17 @@ function filterme() {
                             <option value="N">Inativo</option>
                         </select>
                     </div>
+                    <a href="<?php echo base_url('listagem_clientes/datatable'); ?>">DataTable Filtering</a>
                 </fieldset>            
             </div>
             <thead>
+                    <?php
+                        if ($this->session->flashdata('msg')){
+                            echo '<div class="alert alert-danger">';
+                            echo $this->session->flashdata('msg');
+                            echo "</div>";
+                        }
+                    ?>     
                 <tr>
                     <th scope="col"></th>
                     <th>Nome</th>
@@ -87,7 +97,7 @@ function filterme() {
                         <td>
                             <a href="<?php echo base_url('listagem_clientes/editar/'.$client['id_cliente']); ?>" class="edit"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
                             <a href="<?php echo base_url('listagem_clientes/deletar/'.$client['id_cliente']); ?>" class="delete"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
-                        </td>                
+                        </td>                                        
                     </tr>
                 <?php } ?>                             
             </tbody>

@@ -8,16 +8,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/css/bootstrapLayout.css";?>">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/css/navIcons.css";?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/css/bootstrapLayout.css";?>">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+    
+
+
+    
+
 <style>
 .icon-center {
     display: block;
@@ -36,8 +43,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item icon-center">
             <a class="nav-link" href="<?php echo base_url('listagem_clientes');?>">
-            <i class="fa fa-user">
-                <span class="badge badge-primary"><?php //echo count($clients);?></span>
+            <i class="fa fa-user">    
+                <span class="badge badge-primary"><?php //echo count($clients) ?></span>
             </i>
             Listagem de Clientes
             </a>
@@ -69,6 +76,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
             <a class="dropdown-item" href="<?php echo base_url('login/logout');?>">Sair</a>
           </div>
         </li>
-      </ul>          
+      </ul>
     </div>
 </nav>
