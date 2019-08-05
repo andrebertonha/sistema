@@ -1,2 +1,5 @@
-# sistema
-login user and client crud with codeigniter 3 v1.01
+# Login / Cadastro
+
++ sistema com cadastro de usuário, login, e um crud simples.
+	+ feito para teste / entrevista	
+
